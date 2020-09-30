@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн магазин </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41ec05d543.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="sources/css/main.css">
+</head>
+
+<body>
+    <!-- Register -->
+    <div class="popup">
+        <div class="popup_menu">
+            <i class="fas fa-arrow-left" id="close_register"></i>
+        </div>
+        <div class="popup_header">
+            <h2>Регистрация</h2>
+        </div>
+        <div class="popup_body">
+            <input class="inputfolder" type="text" placeholder="Почта"> <br>
+            <input class="inputfolder" type="text" placeholder="Логин"> <br>
+            <input class="inputfolder" type="text" placeholder="Пароль"> <br>
+            <input class="inputfolder" type="text" placeholder="Повторите пароль"> <br>
+            <div class="popup_body_end" style="margin-top: 35vh;">
+                <button class="redbutton">Зарегистрироваться</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- Login -->
+    <div class="popup">
+        <div class="popup_menu">
+            <i class="fas fa-arrow-left" id="close_register"></i>
+        </div>
+        <div class="popup_header">
+            <h2>Авторизация</h2>
+        </div>
+        <div class="popup_body">
+
+            <input class="inputfolder" type="text" placeholder="Логин"> <br>
+            <input class="inputfolder" type="password" placeholder="Пароль"> <br>
+            <p><a href="">Забыли пароль?</a></p>
+
+            <div class="popup_body_end" style="margin-top: 50vh;">
+                <button class="redbutton">Войти</button>
+                <p style="margin-top: 10px;">Нет аккаунта? <b><a href="">Создать</a></b></p>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Create profile -->
+    <div class="popup">
+        <div class="popup_menu">
+            <i class="fas fa-arrow-left" id="close_register"></i>
+        </div>
+        <div class="popup_header">
+            <h2>Создать ваш профиль</h2>
+        </div>
+        <div class="popup_body">
+
+            <div class="avatar">
+                <img src="sources/unnamed.jpg" alt="Avatar">
+                <div class="avatar_add">+</div>
+            </div>
+
+            <input class="inputfolder" type="text" placeholder="Имя"> <br>
+            <input class="inputfolder" type="text" placeholder="Фамилия"> <br>
+            <input class="inputfolder" type="text" placeholder="Город"> <br>
+
+            <div class="popup_body_end" style="margin-top: 20vh;">
+                <button class="redbutton">Принять</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Order info -->
+    <div class="popup">
+        <div class="popup_menu">
+            <i class="fas fa-arrow-left" id="close_register"></i>
+        </div>
+        <div class="popup_header">
+            <h2>Информация о заказе</h2>
+        </div>
+        <div class="popup_body">
+
+
+
+                <input class="inputfolder" type="text" placeholder="Введите Ваше местоположение">
+
+            <br>
+            <a href="">
+                <p><i style="margin-right: 5px;" class="fas fa-location-arrow"></i>Использовать моё местоположение</p>
+            </a>
+            <div class="infofolder">
+                <i class="fas fa-clock"></i>
+               <span>Информация о заказе, что и куда прибыло</span>
+            </div>
+            <div class="popup_body_end" style="margin-top: 40vh;">
+                <button class="redbutton">Принять</button>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+    <!-- Filter & Sort 1 -->
+    <div class="popup">
+        <div class="popup_menu">
+            <i class="fas fa-arrow-left" id="close_register"></i>
+        </div>
+        <div class="popup_header">
+            <h2>Фильтр</h2>
+        </div>
+        <div class="popup_body">
+
+            <p>Цена:</p><br>
+            <input class="inputfolder_outlined" type="text" placeholder="от"><br>
+            <input class="inputfolder_outlined" type="text" placeholder="до"><br><br>
+            <p>Производитель:</p><br><br>
+            <input class="inputfolder" type="text" placeholder="Поиск">
+            <p>Сортировка:</p><br><br>
+            <select class="inputfolder" type="text" style="width: 280px;">
+                <option value="">По умолчанию (цена)</option>
+                <option value="">По цене</option>
+                <option value="">По названию</option>
+                <option value="">По производителю</option>
+            </select>
+
+
+            <div class="popup_body_end" style="margin-top: 20vh;">
+                <button class="redbutton" style="width: 130px;">Принять</button>
+                <button class="graybutton" style="width: 130px; margin-left: 15px;">Сбросить</button>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+</body>
+
+</html>

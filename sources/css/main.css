@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+/* Popups */
+.popup {
+    width: 100%;
+    height: 100vh;
+    background: #f7f7ef;
+    position: fixed;
+    z-index: 100;
+}
+.popup_menu {
+    margin: 20px 25px;
+    font-size: 25px;
+}
+.popup_header {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+.popup_body {
+    margin-top: 25px;
+    text-align: center;
+}
+.choose_fullwidth {
+    display: flex;
+    
+}
+.choose_fullwidth_elem {
+    color: #000;
+    border-bottom: 1px solid #000;
+    width: 50%;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.choose_fullwidth_elem.active {
+    border-bottom: 1px solid #ef715a;
+    color: #ef715a;
+    text-shadow: #000;
+}
+
+.avatar {
+    
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+.avatar_add {
+    background: #ef715a;
+    font-size: 33px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 38px;
+    height: 38px;
+    color: #fff;
+}
+.avatar img {
+    clip-path: circle(50% at 50% 50%);
+    width: inherit;
+    height: inherit;
+}
+/* Others */
+.inputfolder {
+    padding: 12px 8px;
+    background: none;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(104, 104, 104);
+    width: 260px;
+    margin-bottom: 25px;
+}
+.inputfolder_outlined {
+    padding: 12px 8px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(104, 104, 104);
+    width: 260px;
+    margin-bottom: 25px;
+}
+.redbutton {
+    background: #ef715a;
+    color: #fff;
+    font-weight: 700;
+    border:none;
+    box-shadow: 0px 0px 5px #ef715a;
+    padding: 12px 0;
+    width: 275px;
+    border-radius: 3px;
+}
+.graybutton {
+    background: none;
+    color: #000;
+    font-weight: 700;
+    border:none;
+    border: 1px solid #000;
+    padding: 12px 0;
+    width: 275px;
+    border-radius: 3px;
+}
+.infofolder {
+    box-shadow: 0px 0px 5px rgb(104, 104, 104);
+    background: none;
+    border-radius: 2px;
+    width: 280px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    color: rgb(194, 194, 194);
+}
+.infofolder .fas {
+    margin: 6px;
+    font-size: 25px;
+}
+.fas {
+    color: #ef715a !important;
+}
