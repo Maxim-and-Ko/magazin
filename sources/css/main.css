@@ -9,7 +9,7 @@ a {
 /* Popups */
 .popup {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #f7f7ef;
     position: fixed;
     z-index: 100;
@@ -27,6 +27,15 @@ a {
 .popup_body {
     margin-top: 25px;
     text-align: center;
+    overflow-y: scroll;
+    height: 65%;
+}
+.popup_body_end {
+    background: #f7f7ef;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
 .choose_fullwidth {
     display: flex;
