@@ -10,6 +10,18 @@ body {
     background: linear-gradient(90deg, #1E130C 0%, #9A8478 100%);
 
 }
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    opacity: 0.1;
+    background: url('../images/background.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 header {
     display: flex;
     color: #fff;
@@ -23,7 +35,7 @@ header {
 }
 .header_search input {
     padding: 5px 5px 5px 40px;
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px #fff;
     border: none;
@@ -32,16 +44,17 @@ header {
 .header_search .fas {
     color: #ef715a;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px;
+    left: 8px;
+    font-size: 20px;
 }
 .header_filter .fas {
     font-size: 25px;
-    margin: 7px 0 0 10px;
+    margin: 5px 0 0 10px;
 }
 .header_menu .fas {
     font-size: 25px;
-    margin: 7px 0 0 10px;
+    margin: 5px 0 0 25px;
 }
 
 
@@ -53,10 +66,15 @@ header {
     width: 100%;
     position: relative;
 }
-.body_head .fas {
+.body_head .fa-arrow-left {
     position: absolute;
     left: 20px;
     font-size: 25px;
+}
+.body_head .fa-trash-alt {
+    right: 20px;
+    font-size: 25px;
+    position: absolute;
 }
 .body_head span {
     border-bottom: 2px solid #fff;
@@ -72,11 +90,16 @@ header {
 }
 
 .goodslist {
-    padding: 20px;
+    padding: 10px;
 }
 .good {
     color: #fff;
     margin-bottom: 50px;
+
+}
+.good_choose {
+    display: inline-block;
+    transform: translateY(-35px);
 }
 .good_picture {
     width: 150px;
@@ -92,7 +115,7 @@ header {
 .good_description {
     display: inline-block;
     vertical-align: top;
-    margin-left: 10px;
+    margin-left: 2px;
 }
 .good_price {
     margin-top: 15px;
@@ -114,6 +137,89 @@ header {
 .good_info {
     text-align: center;
     margin-top: 5px;
+}
+
+.cataloglist {
+    margin: 30px 20px;
+}
+.item {
+    border-radius: 15px;
+    width: 95px;
+    height: 110px;
+    margin-right: 13px;
+    margin-top: 20px;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+}
+.item_picture {
+    width: 95px;
+    height: 65px;
+    
+}
+.item_picture img {
+    width: inherit;
+    height: inherit;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.item_description {
+    background: url('../images/wood.png') no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 95px;
+    height: 45px;
+}
+.item_description .item_title {
+    text-align: center;
+    font-size: 15px;
+
+}
+.item_description .item_price {
+    text-align: right;
+    margin: 2px 5px 0 0;
+    font-size: 10px;
+}
+.item_newitembadge {
+    background: linear-gradient(180deg, #FF8008 0%, #FFC837 100%);
+    color: #fff;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    border-radius: 30px;
+    padding: 13px 5px;
+}
+.newproduct {
+    margin: 20px;
+    width: 330px;
+    
+    height: 60px;
+}
+.newproduct img {
+    width: inherit;
+    height: inherit;
+}
+
+.menu {
+    width: 100%;
+    height: 55px;
+    background: rgba(39, 40, 34, 1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    font-size: 25px;
+}
+.menu_point {
+    width: 36%;
+    margin: 13px 0 0 30px;
+}
+.menu_point.active {
+    color: #ef715a;
+    text-shadow: 0 0 5px #fff;
 }
 /* Popups */
 .popup {
@@ -147,6 +253,69 @@ header {
     text-align: center;
     padding: 30px 0;
 }
+
+.itempopup {
+    position: fixed;
+    top: 35px;
+    left: 10px;
+    z-index: 100;
+    background: #191A16;
+    border: 1px solid #ADADAD;
+    box-sizing: border-box;
+    border-radius: 34px;
+    width: 95%;
+    height: 85%;
+}
+.itempopup_picture {
+    height: 156px;
+    filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.3));
+    width: 100%;
+    position: relative;
+}
+.itempopup_picture img {
+    width: inherit;
+    height: inherit;
+    border-radius: 34px;
+}
+.itempopup_close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+.itempopup_description {
+    color: #fff;
+    padding: 20px 23px;
+
+}
+.itempopup_description_title {
+    font-size: 18px;
+}  
+.itempopup_description_desc {
+    font-size: 14px;
+    margin-top: 20px;
+} 
+.itempopup_actions {
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.itempopup_actions_elem {
+    width: 18%;
+    text-align: center;
+
+}
+
+
+
+
 .choose_fullwidth {
     display: flex;
     
@@ -241,3 +410,143 @@ header {
     margin: 6px;
     font-size: 25px;
 }
+/* Checkmark style starts */
+@-moz-keyframes dothabottomcheck {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 10px;
+    }
+  }
+  @-webkit-keyframes dothabottomcheck {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 10px;
+    }
+  }
+  @keyframes dothabottomcheck {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 10px;
+    }
+  }
+  @keyframes dothatopcheck {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      height: 24px;
+    }
+  }
+  @-webkit-keyframes dothatopcheck {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      height: 24px;
+    }
+  }
+  @-moz-keyframes dothatopcheck {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      height: 24px;
+    }
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  
+  .check-box {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-transition: border-color ease 0.2s;
+    -o-transition: border-color ease 0.2s;
+    -webkit-transition: border-color ease 0.2s;
+    transition: border-color ease 0.2s;
+    cursor: pointer;
+  }
+  .check-box::before, .check-box::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    height: 0;
+    width: 4px;
+    background-color: #fff;
+    display: inline-block;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 5px;
+    content: ' ';
+    -webkit-transition: opacity ease .5;
+    -moz-transition: opacity ease .5;
+    transition: opacity ease .5;
+  }
+  .check-box::before {
+    top: 14.4px;
+    left: 8.2px;
+    box-shadow: 0 0 0 1px #667788;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  .check-box::after {
+    top: 7.4px;
+    left: 1px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  input[type=checkbox]:checked + .check-box,
+  .check-box.checked {
+    border-color: #fff;
+  }
+  input[type=checkbox]:checked + .check-box::after,
+  .check-box.checked::after {
+    height: 10px;
+    -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
+    -o-animation: dothabottomcheck 0.2s ease 0s forwards;
+    -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+    animation: dothabottomcheck 0.2s ease 0s forwards;
+  }
+  input[type=checkbox]:checked + .check-box::before,
+  .check-box.checked::before {
+    height: 24px;
+    -moz-animation: dothatopcheck 0.4s ease 0s forwards;
+    -o-animation: dothatopcheck 0.4s ease 0s forwards;
+    -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+    animation: dothatopcheck 0.4s ease 0s forwards;
+  }
+  
